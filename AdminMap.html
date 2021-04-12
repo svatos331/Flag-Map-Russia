@@ -1,0 +1,543 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.AdminPanel_0{
+    width: 571px;
+    background-color: grey;
+    z-index: 999;
+    margin-bottom: -119px;
+    position: absolute;
+}
+body{
+    background-color: black;
+}
+.activationBlock{
+    display: block !important;
+}
+
+.oblastConfig {
+    padding: 2px 15px 2px 15px;
+    margin-top: 5px;
+    background: #2b4392;
+    color: #fff;
+    cursor: pointer;
+}
+.openConfig {
+    display: none;
+}
+
+
+.ActivityBlocked{
+    display: block !important;
+    border-top: 1px solid #fff;
+    margin-top: 7px;
+    padding-top: 7px;
+}
+
+.addPostConfiguration td {
+
+    border: 1px solid black;
+}
+
+    </style>
+</head>
+<body>
+
+    <script src="allArrWindow.js"></script>
+
+
+    <div class="AdminPanel_0">
+
+
+        <ul style="padding: 0;width: max-content;margin: auto;margin-top: 10px;margin-bottom: 10px;"><li style="
+            display: inline-block;
+        "><div id="FlagCorrect_1" style="
+            width: max-content;
+            padding: 10px 20px 10px 20px;
+            background: #3a3a3a;
+            color: #fff;
+            margin-right: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        "> Модалки</div></li><li style="
+            display: inline-block;
+        "><div id="ModalCorrect_1" style="
+            width: max-content;
+            padding: 10px 20px 10px 20px;
+            background: #2b4392;
+            color: #fff;
+            margin-right: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        ">Флаги</div></li></ul>
+
+
+
+        <div class="FocusBox1 activationBlock" style=" display:none;">
+            Создание Флага
+
+
+
+            
+           <p style="display: flex;"><span>Город  </span><input value="Город" id="TownScript" type="text"></p> 
+           <p style="display: flex;"><span>Ссылка  </span><input value="/"  id="URLScript" type="text"></p> 
+
+           <p style="display: flex;"><span>Класс  </span><input value="" id="CLassScript" type="text"></p>
+
+
+
+           <p style="display: flex;"><span>Позиция X</span><input id="r1" oninput="fun1()" value="2" type="range" min="2" max="100" step="0.5"></p> 
+           <p style="display: flex;"><span>Позиция Y</span><input id="r2" oninput="fun2()" value="1" type="range" min="1" max="74" step="0.5"></p> 
+           <button onclick="crateFlag()">Сохранить</button>
+        </div>
+
+
+        <div class="FocusBox2 " style=" display:none;">
+
+
+
+            Создание Модалки
+
+
+
+
+         <div class="oblastConfig">Приволжский федеральный округ</div>
+        <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div data-name="Oblast_1" class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_1" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+
+
+
+
+
+         <div class="oblastConfig">Казахстан</div>
+         <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_2" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+         
+         <div class="oblastConfig">Северо-Кавказский федеральный округ</div>
+               <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_3" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+
+         <div class="oblastConfig">Южный федеральный округ</div>
+               <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_4" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+         <div class="oblastConfig">Центральный федеральный округ</div>
+         <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_5" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+         <div class="oblastConfig">Северо западный федеральный округ</div>
+         <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_6" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+         <div class="oblastConfig">Уральский федеральный округ</div>
+         <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_7" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+         <div class="oblastConfig">Сибирский федеральный округ</div>
+         <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_8" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+         <div class="oblastConfig">Дальневосточный федеральный округ</div>
+         <div class="openConfig">
+            <div class="addPostConfiguration">
+        
+                <div class="ContentItemsConfig"></div>
+                <div>
+                    <span>url</span> <input type="text">
+                </div>
+
+                <div>
+                    <span>name</span> <input type="text">
+                </div>
+                
+                <div>
+                    <span>num</span> <input type="text">
+                </div>
+
+                <button data-id="Oblast_9" onclick="clickAddCategory(this)">Добавить</button>
+            </div>
+    
+        </div>
+
+
+         <button onclick="saveALLConf()">Сохранить все</button>
+
+
+         <div id="ResultArr">
+
+         </div>
+        </div>
+
+    </div>
+
+
+
+    <object id="object" type="image/svg+xml" data="map.svg">
+        <img src="map.svg">
+    </object>
+
+
+
+
+
+    <script>
+
+        // Events
+        document.getElementById("ModalCorrect_1").addEventListener("click", function(){
+            document.getElementsByClassName("FocusBox2")[0].classList.remove("activationBlock")
+            document.getElementsByClassName("FocusBox1")[0].classList.add("activationBlock")
+        })
+
+        document.getElementById("FlagCorrect_1").addEventListener("click", function(){
+            document.getElementsByClassName("FocusBox2")[0].classList.add("activationBlock")
+            document.getElementsByClassName("FocusBox1")[0].classList.remove("activationBlock")
+        })
+
+     for (let i = 0; i < document.getElementsByClassName("oblastConfig").length; i++) {
+        document.getElementsByClassName("oblastConfig")[i].addEventListener("click", function(){
+            document.getElementsByClassName("openConfig")[i].classList.toggle("ActivityBlocked")
+        })
+         
+     }
+
+
+        
+
+
+
+
+
+
+
+
+window.onload = function () {
+
+var frame = document.getElementById("object")
+var innerDoc = (frame.contentDocument) ? frame.contentDocument : frame.contentWindow.document;
+
+
+
+
+let iframeLink = document.createElement('link');
+
+iframeLink.href = 'adminMap.css'; // css файл для iFrame 
+iframeLink.rel = 'stylesheet';
+iframeLink.type = 'text/css';
+
+innerDoc.children[0].appendChild(iframeLink)
+
+
+
+
+
+
+
+
+
+
+var input = document.getElementById('TownScript')
+input.oninput = function() {
+    ((document.getElementById("object").contentDocument) ? document.getElementById("object").contentDocument : document.getElementById("object").contentWindow.document).getElementById("resultSVG").innerHTML = input.value;
+};
+var input2 = document.getElementById('URLScript')
+input2.oninput = function() {
+    (document.getElementById("object").contentDocument) ? document.getElementById("object").contentDocument : document.getElementById("object").contentWindow.document.getElementById("FlagBox").setAttribute('xlink:href',input2.value );
+};
+
+var input2 = document.getElementById('CLassScript')
+input2.oninput = function() {
+    (document.getElementById("object").contentDocument) ? document.getElementById("object").contentDocument : document.getElementById("object").contentWindow.document.getElementById("FlagBox").setAttribute('xlink:href',input2.value );
+};
+
+
+
+
+}
+function crateFlag() {
+    var x = document.getElementById('r1').value
+   var y = document.getElementById('r2').value 
+   var uri = document.getElementById('URLScript').value
+   var town = document.getElementById('TownScript').value
+
+   var classsValue = document.getElementById('CLassScript').value
+
+    var data = []
+    data.push({x:x, y:y, town:town, uri:uri, class:classsValue})
+    console.log(data)
+}
+
+function fun1() {
+   var rngX = document.getElementById('r1');
+   var rngY = document.getElementById('r2');
+   ((document.getElementById("object").contentDocument) ? document.getElementById("object").contentDocument : document.getElementById("object").contentWindow.document).getElementById("FlagBox").setAttribute('style','transform: translate('+rngX.value+'%, '+rngY.value+'%);')
+}
+function fun2() {
+   var rngX = document.getElementById('r1');
+   var rngY = document.getElementById('r2');
+   ((document.getElementById("object").contentDocument) ? document.getElementById("object").contentDocument : document.getElementById("object").contentWindow.document).getElementById("FlagBox").setAttribute('style','transform: translate('+rngX.value+'%, '+rngY.value+'%);')
+}
+
+
+
+// клик по кнопке добавить 
+function clickAddCategory(a){
+
+    let url = a.parentElement.children[1].getElementsByTagName("input")[0].value
+    let name = a.parentElement.children[2].getElementsByTagName("input")[0].value
+    let num = a.parentElement.children[3].getElementsByTagName("input")[0].value
+    a.parentElement.getElementsByTagName("tbody")[0].innerHTML += `<tr style=" width: 100%; "> <td>${url}</td><td>${name}</td><td>${num}</td></tr>`
+    url = null
+    name = null
+    num = null
+}
+// клик сохранить все 
+function saveALLConf() {
+
+
+
+
+
+
+
+
+    var goBoxProff = []
+
+    for (let i = 0; i < document.getElementsByClassName("ContentItemsConfig").length; i++) {
+        let wrapperCol = []
+        for (let j = 0; j < document.getElementsByClassName("ContentItemsConfig")[i].getElementsByTagName("tbody")[0].children.length; j++) {
+            let stringCount = {
+            icoUrl: document.getElementsByClassName("ContentItemsConfig")[i].getElementsByTagName("tbody")[0].children[j].children[0].innerText,
+            nameCategory: document.getElementsByClassName("ContentItemsConfig")[i].getElementsByTagName("tbody")[0].children[j].children[1].innerText, 
+            num: document.getElementsByClassName("ContentItemsConfig")[i].getElementsByTagName("tbody")[0].children[j].children[2].innerText
+                            }
+             wrapperCol.push(stringCount)
+        } 
+        goBoxProff.push(wrapperCol)
+    }
+
+
+    // console.log(goBoxProff)
+
+
+
+
+     document.getElementById("ResultArr").innerText = JSON.stringify(goBoxProff)
+
+
+
+
+
+
+}
+
+
+
+
+
+let i = 0
+for (key in arrForModal) {
+let wrapperContainet = `<table style=" width: 100%; "> <tbody style=" width: 100%; ">`;
+    arrForModal[key].forEach(element => {  
+        wrapperContainet += '<tr style=" width: 100%; "> <td>'+element.icoUrl+'</td><td>'+element.nameCategory+'</td><td>'+element.num+'</td></tr>'
+        // wrapperContainet.innerText  = '<tr style=" width: 100%; "> <td>'+element.icoUr+'</td><td>'+element.nameCategory+'</td><td>'+element.num+'</td></tr>'
+        // console.log(wrapperContainet)
+    });
+    wrapperContainet.innerText += '</tbody></table>'
+    let deb = document.createElement("div")
+    deb.innerHTML = wrapperContainet
+    wrapperContainet = null
+    console.log(deb)
+    document.getElementsByClassName("ContentItemsConfig")[i].append(deb)
+i ++
+}
+
+
+
+
+
+    </script>
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
